@@ -15,6 +15,8 @@ import org.ensime.pcplod._
 class DataMacroPcSpec extends FlatSpec {
 
   "@data" should "handle definitions of @data" in withMrPlod("classes.scala") { mr: MrPlod =>
+    mr.messages shouldBe Nil
+
     mr.symbolAtPoint('me) shouldBe Some("pctesting.Me")
     mr.typeAtPoint('me) shouldBe Some("pctesting.Me")
 

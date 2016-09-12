@@ -26,3 +26,7 @@ object Foo {
 @data class Mine(val foo: String = "foo", val bar: Long = 13)
 
 @data class Covariant[+I](item: I)
+
+object Testing {
+  val me = Me(): Me
+}
